@@ -1,0 +1,7 @@
+name: 'Commerce Views Connector'
+type: module
+description: 'Allows Commerce price fields to be rendered in Views using a more typical approach.'
+core: 8.x
+package: views
+#dependencies:
+#  - commerce:commerce

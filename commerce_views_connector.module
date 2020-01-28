@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function commerce_views_connector_views_data() {
+  $data['commerce_views_connector']['table']['group'] = t('Global');
+  $data['commerce_views_connector']['table']['join'] = [
+    // Exist in all views.
+    '#global' => [],
+  ];
+  $data['commerce_views_connector']['cvc_price'] = [
+    'title' => t('[CVC] Price'),
+    'help' => t('Outputs a Price field in a format more typical for Views.'),
+    'field' => [
+      'id' => 'commerce_views_connector_price',
+    ],
+  ];
+
+  $data['commerce_views_connector']['cvc_list_price'] = [
+    'title' => t('[CVC] List Price'),
+    'help' => t('Outputs a List Price field in a format more typical for Views.'),
+    'field' => [
+      'id' => 'commerce_views_connector_list_price',
+    ],
+  ];
+
+  return $data;
+
+}
